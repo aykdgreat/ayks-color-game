@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #d1d2d6;
+}
+
+.card {
+  width: 500px;
+  max-width: 90%;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #0000001a;
+  padding: 20px 25px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.color-box {
+  width: 70%;
+  height: 120px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 70%;
+  margin: 0 auto 20px;
+}
+
+.color-option {
+  flex: 1 0 40%;
+  list-style-type: none;
+  width: 100px;
+  height: 60px;
+  border: none;
+}
+
+.game-status {
+  /* font-size: 20px; */
+  font-size: 1.5em;
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-bottom: 20px;
+  /* visibility: hidden; */
+}
+
+.game-status.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.new-game {
+  border: none;
+  padding: 15px;
+  background-color: #008080;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.success {
+  color: green;
+}
+
+.oops {
+  color: red;
+  animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
